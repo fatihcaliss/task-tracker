@@ -1,9 +1,10 @@
 import Header from "./components/Header";
 import Tasks from "./components/Tasks";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
-  const [newTask,setNewTask] = useState([])
+
+  const [newTask,setNewTask] = useState(JSON.parse(localStorage.getItem("tasks")) || []);
 
   const removeTask = (task) => {
     const filtered = newTask.filter((e) => e.task !== task);
@@ -18,10 +19,15 @@ function App() {
     ])
     }
   }
+  useEffect(() => {
+    localStorage.setItem("tasks",JSON.stringify(newTask));
+  }, [newTask])
+  
+
   return (
     <>
     <Header getTasks={getTasks}/>
-    <Tasks newTask={newTask} removeTask={removeTask}/>
+    <Tasks newTask={newTask} removeTask={removeTask} />
     </>
   );
 }

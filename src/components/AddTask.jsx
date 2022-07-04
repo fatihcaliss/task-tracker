@@ -3,7 +3,8 @@ import { useState } from "react";
 const AddTask = ({ getTasks }) => {
     const [task, setTask] = useState({
         task: "",
-        date: ""
+        date: "",
+        isDone:false
     })
     const handleChange = (e) => {
         setTask({
@@ -20,7 +21,8 @@ const AddTask = ({ getTasks }) => {
             getTasks(task);
             setTask({
                 task: "",
-                date: ""
+                date: "",
+                isDone:false
             })
         }
     }
