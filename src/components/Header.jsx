@@ -8,7 +8,7 @@ const Header = ({getTasks}) => {
     return (
         <section className="header">
             <h1>TASK TRACKER</h1>
-            <button onClick={() => setShowAddTask(!showAddTask)}>Show Add Task Bar</button>
+            <button onClick={() => setShowAddTask(!showAddTask)}>{showAddTask ? "Hide Add Task Bar" : "Show Add Task Bar"}</button>
             {showAddTask && <AddTask getTasks={getTasks}/>}
         </section>
     )
