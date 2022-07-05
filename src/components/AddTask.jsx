@@ -29,9 +29,9 @@ const AddTask = ({ getTasks }) => {
     return (
         <form className="inputs" onSubmit={handleSubmit}>
             <label htmlFor="task">Task</label>
-            <input type="text" placeholder="Add Task" id="task" onChange={handleChange} value={task.task} />
+            <input type="text" placeholder="Add Task" id="task" onChange={handleChange} value={task.task} required/>
             <label htmlFor="date">Add Date ⏳ Time</label>
-            <input type="datetime-local" id="date" onChange={handleChange} value={task.date} />
+            <input type="datetime-local" id="date" onChange={handleChange} value={task.date} required/>
             <button>Save Task</button>
         </form>
     )
