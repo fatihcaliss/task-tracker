@@ -5,7 +5,7 @@ const Task = ({ task, date, removeTask, isDone, id, handleChange }) => {
 
     return (
 
-        <div className="task"  onClick={()=> handleChange(id)} style = {{cursor:"pointer",textDecoration:isDone && "line-through"}}>
+        <div className="task"  onClick={()=> handleChange(id)} style = {{cursor:"pointer",textDecoration:isDone && "line-through",borderLeft:isDone && "solid 10px black"}}>
             <div className="deneme">
                 <p>{task}</p>
                 <p>{date}</p>  
