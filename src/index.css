@@ -84,3 +84,11 @@ button:hover {
   word-wrap: break-word;
 }
 
+@media (max-width:576px){
+  #root{
+    width: 374px;
+  }
+  .inputs{
+    width: 100%;
+  }
+}
