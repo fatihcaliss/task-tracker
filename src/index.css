@@ -59,6 +59,7 @@ button {
   border-radius: 1rem;
   outline: none;
   border: none;
+  cursor: pointer;
 }
 button:hover {
   background-color: #D0C9C0;
